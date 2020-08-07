@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Image Distortion Effects with SVG Filters | Demo 2 | Codrops</title>
+	<meta name="description" content="Some distortion hover effects on images using SVG filters." />
+	<meta name="keywords" content="distortion, svg filter, hover, image, effect, web, javascript" />
+	<meta name="author" content="Codrops" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Antic+Didone|Nunito+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+</head>
+
+<!--<body class="demo-2">-->
+	<main>
+		
+		<div class="content">
+			<svg class="distort" width="350" height="450" viewBox="0 0 350 450">
+				<filter id="distortionFilter">
+					<feTurbulence type="fractalNoise" baseFrequency="0.01 0.003" numOctaves="5" seed="2"
+						stitchTiles="noStitch" x="0%" y="0%" width="100%" height="100%" result="noise" />
+					<feDisplacementMap in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R"
+						yChannelSelector="B" x="0%" y="0%" width="100%" height="100%" filterUnits="userSpaceOnUse" />
+				</filter>
+				<g filter="url(#distortionFilter)">
+					<image class="distort__img" x="50" y="50" xlink:href="https://picsum.photos/200/200?grayscale?random=1" height="350" width="250" />
+					<image class="distort__img" x="50" y="50" xlink:href="https://picsum.photos/200/200?grayscale?random=2" height="350" width="250" />
+					<image class="distort__img" x="50" y="50" xlink:href="https://picsum.photos/200/200?grayscale?random=3" height="350" width="250" />
+					<image class="distort__img" x="50" y="50" xlink:href="https://picsum.photos/200/200?grayscale?random=4" height="350" width="250" />
+					<image class="distort__img" x="50" y="50" xlink:href="https://picsum.photos/200/200?grayscale?random=5" height="350" width="250" />
+					<image class="distort__img" x="50" y="50" xlink:href="https://picsum.photos/200/200?grayscale?random=6" height="350" width="250" />
+					<image class="distort__img" x="50" y="50" xlink:href="https://picsum.photos/200/200?grayscale?random=7" height="350" width="250" />
+					<image class="distort__img" x="50" y="50" xlink:href="https://picsum.photos/200/200?grayscale?random=8" height="350" width="250" />
+					<image class="distort__img" x="50" y="50" xlink:href="https://picsum.photos/200/200?grayscale?random=9" height="350" width="250" />
+				</g>
+			</svg>
+			<nav class="menu">
+				<a href="#" class="menu__link"><span>A tomato doesn't taste like a tomato.</span></a>
+				<a href="#" class="menu__link">All you have in the fridge is one egg.</a>
+				<a href="#" class="menu__link">An artificial intelligence is hungry.</a>
+				<a href="#" class="menu__link">A country use the same oil since 1854.</a>
+				<a href="#" class="menu__link">You stay too long at the agency at Xmas.</a>
+				<a href="#" class="menu__link">You get lost on YouTube recipes.</a>
+				<a href="#" class="menu__link">Someone decides to build a city in the middle of the desert.</a>
+				<a href="#" class="menu__link">A design studio wants to flirt with their clients.</a>
+				<a href="#" class="menu__link">There are some strange sounds in the kitchen.</a>
+			</nav>
+		</div>
+	</main>
+	<script src="js/charming.min.js"></script>
+	<script src="js/TweenMax.min.js"></script>
+	<script src="js/demo2.js"></script>
+</body>
+
+</html>
